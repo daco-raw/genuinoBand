@@ -1,11 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { metadata } from "../utils/metadata";
+import { HomeMeta } from "../utils/metadata";
 import Cover from "../components/Cover.astro";
-
-const { home } = metadata;
 ---
 
-<Layout title={home.title} desc={home.desc}>
+<Layout {...HomeMeta}>
   <Cover />
 </Layout>
