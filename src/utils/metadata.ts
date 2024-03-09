@@ -6,6 +6,10 @@ const metadata = {
     author: "Daniel Colmenares",
     website: "http://dacoapp.com",
     generator: "Dacoapp.com",
+    keywords: "banda musical, worship, alabanza",
+    googleBots: "index, follow, noimageindex",
+    robots: "index, follow, nocache",
+    category: "Banda musical",
   },
   about: {
     title: "Sobre Nosotros",
@@ -14,6 +18,10 @@ const metadata = {
     author: "Daniel Colmenares",
     website: "http://dacoapp.com",
     generator: "Dacoapp.com",
+    keywords: "banda musical, worship, alabanza",
+    googleBots: "index, follow, noimageindex",
+    robots: "index, follow, nocache",
+    category: "Banda musical",
   },
 };
 
@@ -26,6 +34,10 @@ const HomeMeta = {
   author: home.author,
   website: home.website,
   generator: home.generator,
+  keywords: home.keywords,
+  googleBots: home.googleBots,
+  robots: home.robots,
+  category: home.category,
 };
 
 const AboutMeta = {
@@ -35,6 +47,10 @@ const AboutMeta = {
   author: about.author,
   website: about.website,
   generator: about.generator,
+  keywords: about.keywords,
+  googleBots: about.googleBots,
+  robots: about.robots,
+  category: about.category,
 };
 
 export { HomeMeta, AboutMeta };
