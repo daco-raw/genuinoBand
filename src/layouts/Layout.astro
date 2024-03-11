@@ -8,12 +8,24 @@ interface Props {
   generator: string;
   keywords: string;
   robots: string;
-  googleBots: string
+  googleBots: string;
   category: string;
-
 }
 
-const { title, desc, favicon, author, website, generator, keywords, robots, googleBots, category } = Astro.props;
+const {
+  title,
+  desc,
+  favicon,
+  author,
+  website,
+  generator,
+  keywords,
+  robots,
+  googleBots,
+  category,
+} = Astro.props;
+
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -35,6 +47,7 @@ const { title, desc, favicon, author, website, generator, keywords, robots, goog
   </head>
   <body>
     <slot />
+    <Footer />
   </body>
 </html>
 
@@ -46,9 +59,20 @@ const { title, desc, favicon, author, website, generator, keywords, robots, goog
 
   html,
   body {
-    background-color: #000000;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
+    background: #141e30; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #243b55,
+      #141e30
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      #243b55,
+      #141e30
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
 </style>

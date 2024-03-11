@@ -1,9 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { HomeMeta } from "../utils/metadata";
-import Cover from "../components/Cover.astro";
+import Cards from "../components/Cards.astro";
+import { links } from "../utils/config";
 ---
 
 <Layout {...HomeMeta}>
-  <Cover />
+  <div class="flex justify-center pb-10">
+    <img
+      src="/logo.webp"
+      alt="genuino band logo"
+      class="w-[200px] pt-5 rounded-full"
+    />
+  </div>
+
+  {
+    links.map((item) => (
+      <div class="flex flex-col">
+        <Cards title={item.title} url={item.url} />
+      </div>
+    ))
+  }
 </Layout>
